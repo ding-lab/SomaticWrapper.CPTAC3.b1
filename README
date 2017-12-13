@@ -1,5 +1,0 @@
-TODO:
-
-* config files should be written to data/config.c3b1 dir
-* add sw_data to config file, point to /data/data.c3b1
-* For now, on epazote, fake C3B1 data and write strelka test as data
