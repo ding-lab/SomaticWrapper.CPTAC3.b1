@@ -30,7 +30,7 @@ MGI="-M"
 # also visible in container
 SW_HOME_C="/gscuser/mwyczalk/projects/SomaticWrapper/somaticwrapper"
 
-DOCKERHOST="-h blade18-2-9.gsc.wustl.edu"  # reuse same host for testing purposes so image loading is faster
+#DOCKERHOST="-h blade18-2-9.gsc.wustl.edu"  # reuse same host for testing purposes so image loading is faster
 
 # Arguments to run_step.sh, for convenience
     # Usage: start_step.sh [options] SN [SN2 ...]
