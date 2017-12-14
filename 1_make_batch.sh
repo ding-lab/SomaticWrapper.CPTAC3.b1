@@ -4,19 +4,17 @@
 #   * Case (e.g., C3L-00004)
 #   * RunName (aka Sample Name, e.g., C3L-00004.WXS)
 
-# This is BamMap for MGI data - ok for current testing purposes
-BAMMAP="/Users/mwyczalk/Data/import.CPTAC3b1/BamMap/CPTAC3.b1.WXS.BamMap.dat"
+source CPTAC3.b1.paths.sh
 
-OUTD="dat"
-mkdir -p $OUTD
-OUT="$OUTD/CPTAC3.b1.WXS.dat"
-rm -f $OUT
+# CASES_H already defined in CPTAC3.b1.paths.  Simply make that directory
+mkdir -p $(dirname $CASES)
+rm -f $CASES
 
 while read CASE; do 
 
 RUN_NAME="$CASE.WXS"
-printf "$CASE\t$RUN_NAME\n" >> $OUT
+printf "$CASE\t$RUN_NAME\n" >> $CASES
 
-done < <(grep -v "^#" $BAMMAP | cut -f 2 | sort -u)
+done < <(grep -v "^#" $BAMMAP_H | cut -f 2 | sort -u)
 
-echo Written to $OUT
+echo Written to $CASES
