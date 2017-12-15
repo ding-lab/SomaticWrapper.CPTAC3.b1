@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Usage: start_run.c3b1.sh [options] -S STEP SN [SN2 ...]
+
 # Start given step(s) for given sample names
 
 # This is a wrapper around SomaticWrapper.workflow/src/run_step.sh with CPTAC3.b1-specific setup added for convenience
@@ -8,12 +10,11 @@
 # LSF_GROUP must be set as environment variable with e.g.,
 # export LSF_GROUP="/mwyczalk/gdc-download"
 
-# Usage: start_run.c3b1.sh [options] -S STEP UUID [UUID2 ...]
 # All options are passed as-is to SomaticWrapper.workflow:run_step.sh
 
 # Note that -S STEP is required
 #
-# If UUID is - then read UUID from STDIN
+# If SN is - then read SN from STDIN
 
 source CPTAC3.b1.paths.sh
 
