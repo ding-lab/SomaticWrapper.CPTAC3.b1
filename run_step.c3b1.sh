@@ -16,7 +16,7 @@
 #
 # If SN is - then read SN from STDIN
 
-source CPTAC3.b1.paths.sh
+source CPTAC3.b1.WXS.paths.sh
 
 if [ ! -z $LSF_GROUP ]; then
     LSF_GROUP_ARG="-g $LSF_GROUP"

@@ -4,7 +4,7 @@
 #   * Case (e.g., C3L-00004)
 #   * RunName (aka Sample Name, e.g., C3L-00004.WXS)
 
-source CPTAC3.b1.paths.sh
+source CPTAC3.b1.WXS.paths.sh
 
 # CASES_H already defined in CPTAC3.b1.paths.  Simply make that directory
 mkdir -p $(dirname $CASES)

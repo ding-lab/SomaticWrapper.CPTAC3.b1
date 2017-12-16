@@ -9,7 +9,7 @@
 #      involves stripping all paths before GDC_import and replacing with /data
 #      An alternative way would be for BamMap to list two paths, container- and host-specific
 
-source CPTAC3.b1.paths.sh
+source CPTAC3.b1.WXS.paths.sh
 
 TEMPLATE="$SWW_HOME/templates/GRCh37.template"
 

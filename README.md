@@ -13,3 +13,7 @@ All output will go into $DATAD/CPTAC3.b1.  Dirs there:
  - log-lsf
 
 
+# examples
+Start parsing all jobs which are ready to be parsed: 
+
+./evaluate_status.c3b1.sh -e -f parsing_ready_to_start -u | ./run_step.c3b1.sh -S parse -
