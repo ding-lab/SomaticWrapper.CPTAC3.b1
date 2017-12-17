@@ -41,11 +41,14 @@ for an example used for this project.
 First, check out copy of [SomaticWrapper.CPTAC3.b1](https://github.com/ding-lab/SomaticWrapper.CPTAC3.b1) with the 
 command,
 ```
-git clone https://github.com/ding-lab/SomaticWrapper.CPTAC3.b1.git
+git clone --recursive https://github.com/ding-lab/SomaticWrapper.CPTAC3.b1.git
 ```
 
 This will download your own copy of SomaticWrapper.CPTAC3.b1 into the current directory for you to get started with.
-You may want to rename this to something specific to your project.
+Note that `SomaticWrapper.workflow` is a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) of `SomaticWrapper.CPTAC3.b1`,
+and the core `SomaticWrapper` project is a submodule of `SomaticWrapper.workflow`.
+
+You may want to rename `SomaticWrapper.CPTAC3.b1` to something specific to your project.
 
 ## Initialization
 
