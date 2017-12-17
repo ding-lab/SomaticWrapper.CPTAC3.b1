@@ -1,5 +1,6 @@
 
-SWW_HOME="/gscuser/mwyczalk/projects/SomaticWrapper/SomaticWrapper.workflow"
+SWW_HOME="SomaticWrapper.workflow"  # Relative directory, since it is a submodule
+
 DATAD_H="/gscmnt/gc2521/dinglab/mwyczalk/somatic-wrapper-data"
 
 # This is the analysis base.  Default is $DATAD_H

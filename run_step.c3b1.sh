@@ -29,7 +29,7 @@ MGI="-M"
 # /usr/local/somaticwrapper which is in the image.  This will let SW use the latest version of 
 # code without needing github/dockerhub rev.  Note that this is possible on MGI because _H paths
 # also visible in container
-SW_HOME_C="/gscuser/mwyczalk/projects/SomaticWrapper/somaticwrapper"
+SW_HOME_C="/gscuser/mwyczalk/projects/SomaticWrapper/SomaticWrapper.CPTAC3.b1/SomaticWrapper.workflow/somaticwrapper"
 
 #DOCKERHOST="-h blade18-2-9.gsc.wustl.edu"  # reuse same host for testing purposes so image loading is faster
 
