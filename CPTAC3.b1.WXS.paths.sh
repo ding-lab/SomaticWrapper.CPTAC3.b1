@@ -1,14 +1,16 @@
+PROJECT="CPTAC3.b1.WXS"
 
 SWW_HOME="SomaticWrapper.workflow"  # Relative directory, since it is a submodule
 
 DATAD_H="/gscmnt/gc2521/dinglab/mwyczalk/somatic-wrapper-data"
 
-# This is the analysis base.  Default is $DATAD_H
-SCRIPTD_H="$DATAD_H/CPTAC3.b1.WXS"
-SCRIPTD_C="/data/CPTAC3.b1.WXS"
+
+# This is the analysis base.  
+SCRIPTD_H="$DATAD_H/$PROJECT"
+SCRIPTD_C="/data/$PROJECT"
 
 CONFIGD_H="$SCRIPTD_H/config"
-CASES="$SCRIPTD_H/CPTAC3.b1.WXS.batch"
+CASES="$SCRIPTD_H/$PROJECT.batch"
 
 BAMMAP_H="/gscuser/mwyczalk/projects/CPTAC3/import.CPTAC3b1/BamMap/CPTAC3.b1.WXS.BamMap.dat"
 
