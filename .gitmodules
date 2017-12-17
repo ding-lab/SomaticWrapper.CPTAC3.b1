@@ -1,0 +1,3 @@
+[submodule "SomaticWrapper.workflow"]
+	path = SomaticWrapper.workflow
+	url = https://github.com/ding-lab/SomaticWrapper.workflow
