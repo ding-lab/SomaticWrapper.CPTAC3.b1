@@ -1,0 +1,16 @@
+TODO:
+
+Incorporate the following feedback:
+What is missing or unclear in Somatic wrapper:
+
+Prerequisites – make BamMap file
+* TODO Describe
+* Link to importGDC.CPTAC3.b1 Do I need to do all these steps? If so, then there is
+“TODO-update” in Installation command and further comment “this is old”.
+* “See here for an example used for this project.” The link is broken.
+
+Initialization
+* TODO Describe how this is done.
+
+Edit path definition file
+* I must update CPTAC3.b1.WXS.paths.sh file, especially PROJECT, DATAD_H and BAMMAP_H variables, right? What else?
