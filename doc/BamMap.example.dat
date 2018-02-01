@@ -1,0 +1,4 @@
+# Summary Date 30/01/2018 21:43:51
+# SampleName	Case	Disease	ExpStrategy	SampType	DataPath	FileSize	DataFormat	Reference	UUID
+C3L-00004.WGS.N	C3L-00004	CCRC	WGS	normal	/gscmnt/gc2521/dinglab/mwyczalk/somatic-wrapper-data/GDC_import/data/59f284e7-cffa-4891-a76c-60dd8e46a01d/CPT0000140163.WholeGenome.RP-1303.bam	137026519152	BAM	hg19	59f284e7-cffa-4891-a76c-60dd8e46a01d
+C3L-00004.WGS.T	C3L-00004	CCRC	WGS	tumor	/gscmnt/gc2521/dinglab/mwyczalk/somatic-wrapper-data/GDC_import/data/c336c120-966a-4ec0-9fc7-6d5c856bbc22/CPT0001540165.WholeGenome.RP-1303.bam	146090178289	BAM	hg19	c336c120-966a-4ec0-9fc7-6d5c856bbc22
