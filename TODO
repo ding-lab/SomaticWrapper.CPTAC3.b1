@@ -13,4 +13,4 @@ Initialization
 * TODO Describe how this is done.
 
 Edit path definition file
-* I must update CPTAC3.b1.WXS.paths.sh file, especially PROJECT, DATAD_H and BAMMAP_H variables, right? What else?
+* I must update SomaticWrapper.paths.sh file, especially  BATCH, PROCESSING_DATAD_H and BAMMAP_H variables, right? What else?

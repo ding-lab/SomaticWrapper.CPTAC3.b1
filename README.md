@@ -84,7 +84,7 @@ typically done once per installation, and is done by various scripts in SomaticW
 
 ## Edit path definition file
 
-The script `CPTAC3.b1.WXS.paths.sh` contains all of the paths used for the analysis and must be edited to run a new project.
+The script `sw.config.sh` contains all of the paths used for the analysis and must be edited to run a new project.
 
 ### Path overview
 
@@ -144,7 +144,7 @@ SomaticWrapper currently consists of the following steps:
 
 To start a step for a given sample name, do,
 ```
-bash run_step.c3b1.sh -S STEP SN
+bash run_batch_step.sh -S STEP SN
 ```
 
 `STEP` can be the number (`1`), name (`run_strelka`) or a collection of steps (`run` and `parse` run the trio `1,2,3` and
@@ -154,11 +154,11 @@ bash run_step.c3b1.sh -S STEP SN
 
 ## Evaluate SomaticWrapper status
 
-The script `evaluate_status.c3b1.sh` will obtain the status of all steps associated with all sample names in the batch
+The script `evaluate_batch_status.sh` will obtain the status of all steps associated with all sample names in the batch
 file.  We use an ad-hoc approach to test the output files of each step, to see whether it is running, completed, or exited
 with an error.  For instance, the following
 ```
-evaluate_status.c3b1.sh
+evaluate_batch_status.sh
 ```
 will give back something like the following for each sample name,
 ```
@@ -170,7 +170,7 @@ have not been initialized.
 
 The script will also provide a summary view of the status of all samples:
 ```
-evaluate_status.c3b1.sh -e
+evaluate_batch_status.sh -e
 ```
 will give back something like the following,
 ```
@@ -186,7 +186,7 @@ matching sample names, and feed that directly into the run script.  For instance
 will start parsing all jobs which are ready to be parsed:
 
 ```
-./evaluate_status.c3b1.sh -e -f parsing_ready_to_start -u | ./run_step.c3b1.sh -S parse -
+./evaluate_batch_status.sh -e -f parsing_ready_to_start -u | ./run_batch_step.sh -S parse -
 ```
 
 ## Debugging

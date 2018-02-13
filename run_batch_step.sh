@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Usage: start_run.c3b1.sh [options] -S STEP SN [SN2 ...]
+# Usage: start_batch_run.sh [options] -S STEP SN [SN2 ...]
 
 # Start given step(s) for given sample names
 
-# This is a wrapper around SomaticWrapper.workflow/src/run_step.sh with CPTAC3.b1-specific setup added for convenience
+# This is a wrapper around SomaticWrapper.workflow/src/run_step.sh with batch-specific setup added for convenience
 # All arguments passed to here will be passed to start_step.sh
 
 # LSF_GROUP must be set as environment variable with e.g.,
@@ -16,7 +16,7 @@
 #
 # If SN is - then read SN from STDIN
 
-source CPTAC3.b1.WXS.paths.sh
+source SomaticWrapper.paths.sh
 
 if [ ! -z $LSF_GROUP ]; then
     LSF_GROUP_ARG="-g $LSF_GROUP"
