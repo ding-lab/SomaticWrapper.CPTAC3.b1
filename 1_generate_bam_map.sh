@@ -3,7 +3,7 @@ source sw.config.sh
 CASE="TestCase"
 
 DIS="TEST"
-ES="WGS"
+ES="WXS"
 DF="BAM"
 REF="GRCh37"
 
@@ -28,7 +28,8 @@ mkdir -p $SCRIPTD_H
 rm -f $BAMMAP_H
 
 # Tumor
-write_bam_map_line "$CASE.$RUN_GROUP.T" "tumor" "/Users/mwyczalk/Data/SomaticWrapper/data/data/SWtest/SWtest.T.bam" >> $BAMMAP_H
-write_bam_map_line "$CASE.$RUN_GROUP.N" "normal" "/Users/mwyczalk/Data/SomaticWrapper/data/data/SWtest/SWtest.N.bam" >> $BAMMAP_H
+# Details: /Users/mwyczalk/Data/SomaticWrapper/SomaticWrapper.CPTAC3.b1/SomaticWrapper.workflow/somaticwrapper/image.setup/S_StrelkaDemoSetup/2_setup_strelka_demo.sh
+write_bam_map_line "$CASE.$RUN_GROUP.T" "tumor" "/Users/mwyczalk/Data/SomaticWrapper/data/S_StrelkaTestData/NA12891_demo20.bam" >> $BAMMAP_H
+write_bam_map_line "$CASE.$RUN_GROUP.N" "normal" "/Users/mwyczalk/Data/SomaticWrapper/data/S_StrelkaTestData/NA12892_demo20.bam" >> $BAMMAP_H
 
 echo Written to $BAMMAP_H

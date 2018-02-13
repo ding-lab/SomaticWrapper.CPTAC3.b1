@@ -4,7 +4,7 @@
 
 # Start given step(s) for given sample names
 
-# This is a wrapper around SomaticWrapper.workflow/src/run_step.sh with batch-specific setup added for convenience
+# This is a wrapper around SomaticWrapper.workflow/run_step.sh with batch-specific setup added for convenience
 # All arguments passed to here will be passed to start_step.sh
 
 # LSF_GROUP must be set as environment variable with e.g.,
@@ -52,4 +52,4 @@ SW_HOME_C="/gscuser/mwyczalk/projects/SomaticWrapper/SomaticWrapper.CPTAC3.b1/So
 
 ARGS="-D $DATAD_H -s $SCRIPTD_H -p $SWW_HOME -c $CONFIGD_C -w $SW_HOME_C $LSF_GROUP_ARG $MGI $DOCKERHOST"
 
-bash $SWW_HOME/src/run_step.sh $ARGS "$@"
+bash $SWW_HOME/run_step.sh $ARGS "$@"
