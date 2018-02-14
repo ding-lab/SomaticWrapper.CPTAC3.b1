@@ -12,13 +12,7 @@ CONFIG_TEMPLATE="$SWW_HOME/templates/GRCh37.template"
 #DATAD_H="/gscmnt/gc2521/dinglab/mwyczalk/somatic-wrapper-data"
 DATAD_H="/Users/mwyczalk/Data/SomaticWrapper/data"  # epazote
 
-## IMPORTD_H is parent directory of where BAM/FASTQ files live.  This is typically created by importGDC
-## The path below must be the leading path of the path found in the BamMap file, 
-## maps to /import
-# currently the plan is that this will be generated automatically during configuration file creation
-# see step 3 for discussion
-#IMPORTD_H="/Users/mwyczalk/Data/SomaticWrapper/data/data"
-
+# IMAGED_H is where per-image data lives (e.g., reference).  
 IMAGED_H="/Users/mwyczalk/Data/SomaticWrapper/data"
 
 # This is the analysis base.
@@ -35,3 +29,8 @@ BAMMAP_H="$SCRIPTD_H/$BATCH.BamMap.dat"
 # CASES file is generated. 
 CASES="$SCRIPTD_H/$BATCH.batch"
 
+# IMPORTD_DAT is created during configuration file creation and allows for dynamic mapping
+# of /import directory (this directory contains BAM/FASTQ files).  That is, it let each
+# run have its own mapping of /import, which is convenient when importing of data is split
+# among multiple disks.  This mapping is created in step 3_create_config.sh
+IMPORTD_DAT="$CONFIGD_H/importd.dat"

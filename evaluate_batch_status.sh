@@ -15,6 +15,6 @@
 # -f status: output only lines matching status, e.g., -f import:completed
 # -u: include only UUID in output
 
-source CPTAC3.b1.WXS.paths.sh
+source sw.config.sh
 
-bash $SWW_HOME/evaluate_status.sh -D $DATAD_H -S $SCRIPTD_H "$@" $CASES
+bash $SWW_HOME/evaluate_status.sh -S $SCRIPTD_H "$@" $CASES
