@@ -1,5 +1,12 @@
 TODO:
 
+Continue implemntation which will run Strelka Demo in docker on epazote
+* separate out /image, /reference, /data files to test funtionality
+* confirm mapping of the above when calling docker run
+
+
+
+
 Incorporate the following feedback:
 What is missing or unclear in Somatic wrapper:
 
@@ -12,5 +19,3 @@ Prerequisites – make BamMap file
 Initialization
 * TODO Describe how this is done.
 
-Edit path definition file
-* I must update SomaticWrapper.paths.sh file, especially  BATCH, PROCESSING_DATAD_H and BAMMAP_H variables, right? What else?
