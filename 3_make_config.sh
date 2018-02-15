@@ -9,6 +9,9 @@
 # the run_step scripts then use this file to map sample name to IMPORTD_H
 # 
 # The configuration file is written to CONFIGD_H directory
+#
+# For StrelkaDemo testing purposes, set use_vep_db=1 to avoid using VEP cache
+
 
 source sw.config.sh
 
@@ -66,6 +69,8 @@ while read LINE; do
     pindel_config = $SW_HOME_C/params/pindel.WES.ini
     varscan_config = $SW_HOME_C/params/varscan.WES.ini
     strelka_config = $SW_HOME_C/params/strelka.WES.ini
+    use_vep_db = 1  # online VEP lookups.  For lightweight use and testing
+    dbsnp_db=/image/B_Filter/dbsnp-demo.noCOSMIC.vcf.gz
 EOF
     # write out mapping to importd.dat file.
     printf "$RUN_NAME\t$IMPORTD_H\n" >> $IMPORTDAT_H

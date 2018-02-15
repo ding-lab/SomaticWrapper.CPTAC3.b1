@@ -1,10 +1,7 @@
 TODO:
 
-Continue implemntation which will run Strelka Demo in docker on epazote
-* separate out /image, /reference, /data files to test funtionality
-* confirm mapping of the above when calling docker run
-
-
+* add support for running image.init code for StrelkaDemo
+* Update documentation
 
 
 Incorporate the following feedback:
