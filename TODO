@@ -1,7 +1,13 @@
 TODO:
 
+* Finish documentation and moving all data to ~/Data/SomaticWrapper
+  * make sure it works out of the box
+  * all data can be copied to destination directories out side of docker
+* test also creating data inside of docker
+
 * add support for running image.init code for StrelkaDemo
 * Update documentation
+* Get status on Docker
 
 
 Incorporate the following feedback:
@@ -9,8 +15,6 @@ What is missing or unclear in Somatic wrapper:
 
 Prerequisites – make BamMap file
 * TODO Describe
-* Link to importGDC.CPTAC3.b1 Do I need to do all these steps? If so, then there is
-“TODO-update” in Installation command and further comment “this is old”.
 * “See here for an example used for this project.” The link is broken.
 
 Initialization

@@ -1,19 +1,34 @@
 # Batch is unique identifier which refers to all runs which are evaluated together
 BATCH="StrelkaDemo"
 
-# Run Group is an arbitrary string which is used to generate sample names and run names
-# By default, sample name is CASE.RUN_GROUP.T/N (e.g., C3L-00004.WXS.N), and run_name is CASE.RUN_GROUP
-RUN_GROUP="WXS"
+# The following are used for synthetic BamMap creation
+DIS="TEST"    # Disease.  Used only in BamMap
+DF="BAM"      # Datafile Format.  Used only in BamMap
+REF="GRCh37"  # Reference.  Used only in BamMap
+# TODO: incorporate REF definition here with some actions 
 
-SWW_HOME_H="SomaticWrapper.workflow"  # Relative directory, since it is a submodule
-CONFIG_TEMPLATE="$SWW_HOME_H/templates/GRCh37.template"
+# Experimental strategy is used to generate sample names and run names, and is WXS, WGS, or RNA-Seq
+# By default, sample name is CASE.EXPSTR.T/N (e.g., C3L-00004.WXS.N), and run_name is CASE.EXPSTR
+# It is also included in BamMap
+# Sample names refer to specific BAM/FASTQ files and are created for CPTAC3 project workflow here:
+#     function get_SN : https://github.com/ding-lab/CPTAC3.case.discover/blob/master/merge_submitted_reads.sh
+EXPSTR="WXS"
 
-# DATAD is root directory of processing results.  Maps to /data
-#DATAD_H="/gscmnt/gc2521/dinglab/mwyczalk/somatic-wrapper-data"
-DATAD_H="/Users/mwyczalk/Data/SomaticWrapper/local/data"  # epazote
+# SWW_HOME_H is path to SomaticWrapper.workflow.  Ordinarily the workflow is distributed
+# as a submodule of this project so the path is ./SomaticWrapper.workflow.  Documentation
+# will assume that this is the case unless indicated otherwise, but SWW_HOME_H can be any path
+SWW_HOME_H="SomaticWrapper.workflow"  
 
-# IMAGED_H is where per-image data lives (e.g., reference, filters).  
-IMAGED_H="/Users/mwyczalk/Data/SomaticWrapper/local/image.data"
+# DATAD_H is root directory of processing results.  Maps to /data
+DATAD_H="$HOME/Data/SomaticWrapper/data"  
+
+# IMAGED_H is where per-image data lives (e.g., reference, databases).  
+IMAGED_H="$HOME/Data/SomaticWrapper/image"
+
+# IMPORTD_H can be defined explicitly or dynamically 
+# It is defined explicitly below.  Alternatively, comment out line below for dynamic mapping which can be
+# different for every tumor/normal pair
+IMPORTD_H_EXPLICIT="$HOME/Data/SomaticWrapper/import"
 
 # This is the analysis base.
 SCRIPTD_H="$DATAD_H/$BATCH"
@@ -23,19 +38,14 @@ CONFIGD_C="/data/$BATCH/config"
 
 SWDATA_C="$SCRIPTD_C/results"  # where SomaticWrapper results are written, relative to continer
 
-# BAMMAP_H will in general be uploaded or generated - here it is generated
+# BAMMAP_H can be uploaded or generated.  
 BAMMAP_H="$SCRIPTD_H/$BATCH.BamMap.dat"
 
-# CASES file is generated. 
+# CASES file is generated. Holds case and run names, as well as per-case IMPORTD_H mapping
 CASES="$SCRIPTD_H/$BATCH.batch"
 
-# IMPORTDAT_H is created during configuration file creation and allows for dynamic mapping
-# of /import directory (this directory contains BAM/FASTQ files).  That is, it let each
-# run have its own mapping of /import, which is convenient when importing of data is split
-# among multiple disks.  This mapping is created in step 3_create_config.sh
-# TODO: this information could be kept in the batch file, which provided per-sample-name information
-IMPORTDAT_H="$SCRIPTD_H/importd.dat"
-
+# This is what the run configuration file will be based on.
+CONFIG_TEMPLATE="$SWW_HOME_H/templates/GRCh37.template"
 
 
 # Define this =1 if in MGI environment
